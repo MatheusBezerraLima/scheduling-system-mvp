@@ -6,8 +6,5 @@ class CreateUserService {
             throw new Error("Por favor, preencha todos os campos.");
         }
 
-        const userAlreadyExists = await this.
-
-
     }
 }
