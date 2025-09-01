@@ -1,10 +1,14 @@
-const { CreateUserServices } = require('../services/CreateUserService');
+const CreateUserServices  = require('../services/CreateUserService');
+const UserRepository  = require("../infra/sequelize/repositories/userRepository");
 
 class userController{
     async create(request, response){
+        console.log(request.body);
+        
         const {name, email, password} = request.body;
         
-        const createUserService = new CreateUserServices();
+        const userRepository = new UserRepository(); 
+        const createUserService = new CreateUserServices(userRepository);
         const user = await createUserService.execute({name, email, password});
        
         return response.status(201).json(user);

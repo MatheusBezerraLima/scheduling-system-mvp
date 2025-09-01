@@ -11,6 +11,7 @@ module.exports = {
       name: 'Admin',
       email: 'admin@exemplo.com',
       password: hashedPassword,
+      status: "Ativo",
       created_at: new Date(),
       updated_at: new Date(),
     }], {});

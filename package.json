@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "db:migrate": "dotenv -e .env -- npx sequelize-cli db:migrate",
-    "db:seed": "dotenv -e .env -- npx sequelize-cli db:seed:all"
+    "db:seed": "dotenv -e .env -- npx sequelize-cli db:seed:all",
+    "db:seed:undo": "dotenv -e .env -- npx sequelize-cli db:seed:all:undo",
+    "db:migrate:undo": "dotenv -e .env -- npx sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "dotenv -e .env -- npx sequelize-cli db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",

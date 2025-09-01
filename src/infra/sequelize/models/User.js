@@ -18,6 +18,10 @@ const User = sequelize.define('user', {
     password: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    status: {
+        type: DataTypes.ENUM("Ativo", "Inativo"),
+        defaultValue: "Ativo"
     }
 }, {
     tableName: "user",

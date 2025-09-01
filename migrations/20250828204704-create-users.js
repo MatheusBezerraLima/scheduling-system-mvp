@@ -21,6 +21,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      status: {
+        type: Sequelize.ENUM("Ativo", "Inativo"),
+        defaultValue: "Ativo"
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
